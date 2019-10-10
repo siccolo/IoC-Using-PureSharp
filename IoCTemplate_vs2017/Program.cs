@@ -23,11 +23,9 @@ namespace IoCTemplate
 
         private static async Task DoWork(string[] args)
         {
-            //Processor.DoWork();
             //var processor = new Processor();
             //processor.DoWork();
-
-
+            //  -- or -- 
             var composition = new Composition();
             composition.Setup<IDataContainer<string>>(() => new DataContainer(), Instantiation.Multiton);
             composition.Setup<IDataManager<string>>(() => new DataManager(Metadata<IDataContainer<string>>.Value), Instantiation.Multiton);
