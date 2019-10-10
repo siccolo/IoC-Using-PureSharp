@@ -18,7 +18,6 @@ namespace IoCTemplate
         public async Task<bool> Load()
         {
             var l = new List<string> { "aa", "bb", "cc" };
-            _DataContainer = new DataContainer();
             var result = await _DataContainer.Init(l);
             return result;
         }
